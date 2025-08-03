@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: football-mash
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m gunicorn app:app --bind 0.0.0.0:$PORT
