@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #121212;
+            color: #f0f0f0;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 500px;
+            margin: auto;
+        }
+        li {
+            background: #1f1f1f;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        a {
+            color: #0ff;
+            margin-top: 20px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Ranked Players</h1>
+    <ul>
+        {% for player, rating in ratings %}
+        <li>{{ player }} — {{ rating }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Battle</a>
+</body>
+</html>
